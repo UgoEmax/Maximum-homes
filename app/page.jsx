@@ -15,7 +15,7 @@ const page = () => {
       <Services />
       <Pricing />
 
-      <h4 className='text-[1rem] font-bold text-gray-500 text-center mb-10'>HOW IT WORKS </h4>
+      <h4 className='text-[1rem] font-bold text-gray-500 text-center mb-10' id='how-it-works'>HOW IT WORKS </h4>
       <h2 className='text-[2.2rem] font-bold text-center mb-10'>Your Property Journey</h2>
 
       <HowItWorks

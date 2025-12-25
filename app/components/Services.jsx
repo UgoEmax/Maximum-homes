@@ -4,7 +4,7 @@ import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 const Services = () => {
   return (
-    <div>
+    <div id='services'>
         <div className='bg-gradient-to-r from-transparent via-gray-400 to-transparent w-full h-[2px]' />
       <h4 className="font-bold text-gray-400 text-center mt-20 mb-10">OUR SERVICES</h4>
       <h2 className='text-center font-bold text-5xl text-black'>Your Goals.</h2>

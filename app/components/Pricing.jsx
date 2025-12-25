@@ -9,7 +9,7 @@ const Pricing = () => {
     const [yearly, setYearly] = useState(false);
     
   return (
-    <div>
+    <div id='pricing'>
       <h2 className='text-center font-bold text-[3rem] mt-20 px-15 mb-10 leading-12'>Choose the Plan That <span className='text-blue-600'>Moves You Forward</span></h2>
       <div className='flex gap-5 justify-center mb-5 w-[300px] p-2 mx-auto'>
         <button className='flex gap-2 justify-between text-gray-500 w-7xl cursor-pointer' onClick={() => setYearly(!yearly)}>Monthly Billing {yearly ? <IoEllipseSharp className='text-[2rem] translate-x-5 text-blue-600 transition-all duration-500 ease-in-out' /> : <IoEllipseSharp className='text-[2rem] -translate-x-5 transition-all duration-300 ease-in-out' /> } <span className='text-blue-600'>Yearly Billing</span></button> 

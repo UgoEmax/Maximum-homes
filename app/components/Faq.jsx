@@ -3,7 +3,7 @@ import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
 const Faq = ({ Question, Answer, onToggle, open }) => {
   return (
-    <div className={`px-5 transition-all duration-300 ease-in ${open ? 'bg-gray-200 rounded-2xl mb-5' : 'null'}`}>
+    <div className={`px-5 transition-all duration-300 ease-in ${open ? 'bg-gray-200 rounded-2xl mb-5' : 'null'}`} id="faqs">
       <button className="flex font-medium text-left justify-between w-full p-5" onClick={onToggle}>{Question}
         <span className="float-right text-2xl">{open ? <IoChevronUp /> : <IoChevronDown />}</span>
       </button>
