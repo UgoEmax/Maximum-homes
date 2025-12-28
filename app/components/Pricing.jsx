@@ -4,20 +4,27 @@ import { IoEllipseSharp } from "react-icons/io5";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import Link from 'next/link';
+import { motion } from 'motion/react';
 
 const Pricing = () => {
     const [yearly, setYearly] = useState(false);
+    console.log("yearly:", yearly);
     
   return (
-    <div id='pricing'>
+    <motion.div 
+    initial={{ opacity: 0, scale: 0 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1, ease: 'easeInOut' }}
+    viewport={{ once: true, amount: 0.5 }}
+    id='pricing' className='md:px-15 mb-10'>
       <h2 className='text-center font-bold text-[3rem] mt-20 px-15 mb-10 leading-12'>Choose the Plan That <span className='text-blue-600'>Moves You Forward</span></h2>
       <div className='flex gap-5 justify-center mb-5 w-[300px] p-2 mx-auto'>
-        <button className='flex gap-2 justify-between text-gray-500 w-7xl cursor-pointer' onClick={() => setYearly(!yearly)}>Monthly Billing {yearly ? <IoEllipseSharp className='text-[2rem] translate-x-5 text-blue-600 transition-all duration-500 ease-in-out' /> : <IoEllipseSharp className='text-[2rem] -translate-x-5 transition-all duration-300 ease-in-out' /> } <span className='text-blue-600'>Yearly Billing</span></button> 
+        <button className='flex gap-2 justify-between text-gray-500 w-7xl cursor-pointer' onClick={() => setYearly(!yearly)}>Monthly Billing {yearly ? <IoEllipseSharp className='text-[2rem] translate-x-5 text-blue-600 transition-all duration-500 ease-in-out' /> : <IoEllipseSharp className='text-[2rem] -translate-x-5 transition-all duration-300 ease-in-out' /> } <span className='text-blue-600'>Yearly Billing</span></button>
         </div>
       <p className='text-center text-gray-500 mb-12'>Switch to Yearly to <span className='text-black'>Save 20%!</span></p> 
 
       {!yearly && (
-        <div className='p-5 m-5'>
+        <div className='p-5 m-5 md:flex md:gap-5 md:10 md:justify-center'>
             <div className='p-5 hover:border-2 rounded-2xl border-gray-400 transition-all duration-300 ease-in-out mb-10'>
                 <h5 className='font-bold text-gray-400 mb-5'>Basic</h5>
                 <h2 className='font-bold text-[4rem] text-gray-400'>$29 <span className='font-light text-[1rem] text-gray-700'>/month</span></h2>
@@ -40,8 +47,8 @@ const Pricing = () => {
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-blue-500'/>1-on-1 agent check-ins</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-blue-500'/>Property valuation reviews</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-blue-500'/>Investment consultations</p>
-                <Link href="/" className='font-bold p-3 mt-5 text-white bg-blue-500 border-blue-400 border-3 rounded-[20px] flex justify-between'>Get Started <IoArrowRedoSharp /></Link>
-            </div>
+                </div>
+                <Link href="/" className='font-bold p-3 text-white bg-blue-500 border-blue-400 border-3 rounded-[20px] flex justify-between'>Get Started <IoArrowRedoSharp /></Link>
             </div>
 
             <div className='p-5 hover:border-2 rounded-2xl border-gray-400 transition-all duration-300 ease-in-out mb-10'>
@@ -53,15 +60,16 @@ const Pricing = () => {
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Custom property scouting</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Private strategy calls</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Priority agent access</p>
-                <Link href="/" className='font-bold p-3 text-white bg-gray-500 border-gray-400 border-3 rounded-[20px] flex justify-between mt-5'>Get Started <IoArrowRedoSharp /></Link>
-            </div>
+                </div>
+
+                <Link href="/" className='font-bold p-3 text-white bg-gray-500 border-gray-400 border-3 rounded-[20px] flex justify-between'>Get Started <IoArrowRedoSharp /></Link>
             </div>
         </div>
 
       )}
 
       {yearly && (
-        <div className='p-5 m-5'>
+        <div className='p-5 m-5 md:flex md:gap-10 md:justify-center'>
             <div className='p-5 hover:border-2 rounded-2xl border-gray-400 mb-10'>
                 <h5 className='font-bold text-gray-400 mb-5'>Basic</h5>
                 <h2 className='font-bold text-[4rem] text-gray-400'>$23 <span className='font-light text-[1rem] text-gray-700'>/year</span></h2>
@@ -71,8 +79,8 @@ const Pricing = () => {
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Monthly market updates</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Access to group Q&A</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Community support</p>
-                <Link href="/" className='font-bold p-3 text-white bg-gray-500 border-gray-400 border-3 rounded-[20px] flex justify-between mt-5'>Get Started <IoArrowRedoSharp /></Link>
-            </div>
+                </div>
+                <Link href="/" className='font-bold p-3 text-white bg-gray-500 border-gray-400 border-3 rounded-[20px] flex justify-between'>Get Started <IoArrowRedoSharp /></Link>
             </div>
   
             <div className='p-5 hover:border-2 rounded-2xl border-blue-500 transition-all duration-300 ease-in-out mb-10'>
@@ -84,8 +92,8 @@ const Pricing = () => {
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-blue-500'/>1-on-1 agent check-ins</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-blue-500'/>Property valuation reviews</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-blue-500'/>Investment consultations</p>
-                <Link href="/" className='font-bold p-3 text-white bg-blue-500 border-blue-400 border-3 rounded-[20px] flex justify-between mt-5'>Get Started <IoArrowRedoSharp /></Link>
-            </div>
+                </div>
+                <Link href="/" className='font-bold p-3 text-white bg-blue-500 border-blue-400 border-3 rounded-[20px] flex justify-between'>Get Started <IoArrowRedoSharp /></Link>
             </div>
                         
             <div className='p-5 hover:border-2 rounded-2xl border-gray-400 transition-all duration-300 ease-in-out mb-10'>
@@ -97,14 +105,14 @@ const Pricing = () => {
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Custom property scouting</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Private strategy calls</p>
                 <p className='flex gap-2'><IoCheckmarkCircleOutline className='text-[1.2rem] translate-y-0.5 text-gray-500'/>Priority agent access</p>
-                <Link href="/" className='font-bold p-3 text-white bg-gray-500 border-gray-400 border-3 rounded-[20px] flex justify-between mt-5'>Get Started <IoArrowRedoSharp /></Link>
-            </div>
+                </div>
+                <Link href="/" className='font-bold p-3 text-white bg-gray-500 border-gray-400 border-3 rounded-[20px] flex justify-between'>Get Started <IoArrowRedoSharp /></Link>
             </div>
         </div>
 
       )}
 
-    </div>
+    </motion.div>
   )
 }
 

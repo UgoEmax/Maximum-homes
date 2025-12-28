@@ -10,9 +10,11 @@ const FaqLogic = () => {
         };
 
   return (
-    <div className="m-5">
-      <h2 className="mt-20 text-5xl font-medium">Questions?</h2>
-      <h3 className="text-5xl font-medium text-blue-500 mb-10">We've Got Answers.</h3> 
+    <div className="m-5 md:px-15">
+      <div className="md:text-center md:flex md:my-20 md:gap-5 md:justify-center">
+      <h2 className="mt-20 md:mt-0 text-5xl font-medium">Questions?</h2>
+      <h3 className="text-5xl font-medium text-blue-500 mb-10 md:mb-0">We've Got Answers.</h3>
+      </div>
 
       <Faq 
       Question="What is Maximum Homes?"
