@@ -1,25 +1,8 @@
 'use client';
-import { useEffect, useState } from 'react';
+import React from 'react'
 import { motion } from 'motion/react';
 
 const About = () => {
-  const slides = ['slide1', 'slide2', 'slide3'];
-  const [ current, setCurrent ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const el = document.getElementById(slides[current]);
-    if (el) el.scrollIntoView({ behaviour: "smooth" });
-  }, [current])
-
-
   return (
     <motion.div 
         initial={{ opacity: 0, scale: 0 }}
