@@ -67,11 +67,11 @@ const Footer = () => {
       </div>
 
       <form action="https://formsubmit.co/28481391347b8dfe4421014691f1a276" method="POST" className='flex flex-col md:px-20 md:m-20 md:justify-center' onSubmit={handleSubmit}>
-            <input type="text" placeholder="Enter your email" className='border border-gray-400 p-3 rounded-4xl my-1 outline-none' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input name='email' type="text" placeholder="Enter your email" className='border border-gray-400 p-3 rounded-4xl my-1 outline-none' value={email} onChange={(e) => setEmail(e.target.value)} />
 
             {error.email && (<p className='text-red-500 text-center'>{error.email}</p>)}
 
-        <textarea placeholder='Describe your dream home' className='border border-gray-400 p-4 rounded-4xl my-2 hover outline-none' rows={10} value={message} onChange={(e) => setMessage(e.target.value)} />
+        <textarea name='message' placeholder='Describe your dream home' className='border border-gray-400 p-4 rounded-4xl my-2 hover outline-none' rows={10} value={message} onChange={(e) => setMessage(e.target.value)} />
        
         <button type='submit' className='cursor-pointer bg-blue-500 rounded-3xl text-left text-white font-medium p-3 mb-10 md:w-[15%] md:text-center hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out'>Subscribe</button>
 
