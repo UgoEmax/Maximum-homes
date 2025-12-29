@@ -42,8 +42,8 @@ const Navbar = () => {
 
       <Link href="#faqs" className='hover:underline'>FAQs</Link>
 
-      <div className='flex align-right float-right mr-0'>
-      <Link href="/" className='mt-5 bg-gray-50 text-gray-950 p-1 rounded-2xl hover:underline -translate-y-6'>Contact Us</Link>
+      <div className='translate-x-35'>
+      <Link href="#contact-us" className='mt-5 bg-gray-50 text-gray-950 p-1 rounded-2xl hover:underline -translate-y-6'>Contact Us</Link>
       </div>
       </div>
     </div>

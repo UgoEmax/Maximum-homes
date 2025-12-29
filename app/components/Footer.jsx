@@ -14,7 +14,7 @@ const Footer = () => {
     const [ email, setEmail ] = useState('');
     const [ message, setMessage ] = useState('');
     const [ success, setSuccess ] = useState(false);
-    const [ error, setError ] = useState(false);
+    const [ error, setError ] = useState({});
 
     const validateForm = (e) => {
         const newErrors = {};
@@ -26,11 +26,14 @@ const Footer = () => {
         }
 
         setError(newErrors);
-        return object.keys(newErrors).length === 0;
+        return Object.keys(newErrors).length === 0;
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        if (!validateForm()) return;
+        e.target.submit();
 
         setSuccess("");
 
@@ -58,21 +61,21 @@ const Footer = () => {
       <p className='text-gray-500 font-medium mb-30 pb-10'>Real estate isn't just about buying and selling — it's about creating a life you love.</p>
       </div>
 
-      <div className='md:bg-gray-200 rounded-4xl pt-10'>
+      <div id='contact-us' className='md:bg-gray-200 rounded-4xl pt-10'>
       <div className='md:text-center md:justify-center'> 
       <h2 className='text-4xl font-bold mb-15'>Join Our <span className='text-blue-500'>Newsletter</span></h2>
       </div>
 
-      <form className='flex flex-col md:px-20 md:m-20 md:justify-center' onSubmit={handleSubmit}>
+      <form action="https://formsubmit.co/28481391347b8dfe4421014691f1a276" method="POST" className='flex flex-col md:px-20 md:m-20 md:justify-center' onSubmit={handleSubmit}>
             <input type="text" placeholder="Enter your email" className='border border-gray-400 p-3 rounded-4xl my-1 outline-none' value={email} onChange={(e) => setEmail(e.target.value)} />
 
-            {error.email && (<p>{error.email}</p>)}
+            {error.email && (<p className='text-red-500 text-center'>{error.email}</p>)}
 
         <textarea placeholder='Describe your dream home' className='border border-gray-400 p-4 rounded-4xl my-2 hover outline-none' rows={10} value={message} onChange={(e) => setMessage(e.target.value)} />
        
         <button type='submit' className='cursor-pointer bg-blue-500 rounded-3xl text-left text-white font-medium p-3 mb-10 md:w-[15%] md:text-center hover:bg-white hover:text-blue-600 transition-all duration-300 ease-in-out'>Subscribe</button>
 
-        {success && (<p>{success}</p>)}
+        {success && (<p className='text-green-500 text-center'>{success}</p>)}
       </form>
       </div>
       
