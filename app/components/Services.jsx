@@ -7,10 +7,10 @@ import { motion } from 'motion/react';
 const Services = () => {
   return (
     <motion.div 
-    initial={{ opacity: 0, scale: 0 }}
+    initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1, ease: 'easeInOut' }}
-    viewport={{ once: true, amount: 0.5 }}
+    transition={{ duration: 2, ease: 'easeInOut' }}
+    viewport={{ once: true, amount: 0.1 }}
     id='services' className='md:px-15 mb-10'>
         <div className='bg-gradient-to-r from-transparent via-gray-400 to-transparent w-full h-[2px]' />
       <h4 className="font-bold text-gray-400 text-center mt-20 mb-10">OUR SERVICES</h4>
@@ -39,7 +39,7 @@ const Services = () => {
       <p className='text-gray-700 mb-5 flex gap-2'><IoCheckmarkCircleOutline className='text-[1.3rem] translate-y-0.5 text-blue-600'/> Photography & listing management</p>
       <p className='text-gray-700 mb-5 flex gap-2'><IoCheckmarkCircleOutline className='text-[1.3rem] translate-y-0.5 text-blue-600'/> Buyer negotiation & closing support</p>
       <div className='md:flex md:justify-center'>
-      <Image src="/images/mansion.jpg" alt="Home Selling" width={400} height={250} className='rounded-full h-100' />
+      <Image src="/images/mansion.jpg" alt="Home Selling" width={400} height={250} className='rounded-full h-75' />
       </div>
     </div>
  

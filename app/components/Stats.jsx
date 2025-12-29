@@ -7,7 +7,7 @@ const Stats = () => {
     initial={{ opacity: 0, scale: 0 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1, ease: 'easeInOut' }}
-    viewport={{ once: true, amount: 0.5 }}
+    viewport={{ once: true, amount: 0.2 }}
     className="flex flex-col text-center gap-5 md:px-20" id="stats">
       <div className="md:flex md:justify-between">
         <div className="mb-15 md:mb-0">

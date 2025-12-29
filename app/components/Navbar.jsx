@@ -8,7 +8,7 @@ const Navbar = () => {
     const [ open, setOpen ] = useState(false);
 
   return (
-    <div className='justify-between fixed z-10 p-1.5 w-full md:py-5 md:pl-15'>
+    <div className='justify-between fixed p-1.5 z-1 w-full md:py-5 md:pl-15 h-[20px]'>
       <Image src="/images/logo.png" alt="Logo" width={50} height={50} className='align-left p-3 invert brightness-0 cursor-pointer' />
 
 

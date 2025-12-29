@@ -12,10 +12,10 @@ const Pricing = () => {
     
   return (
     <motion.div 
-    initial={{ opacity: 0, scale: 0 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1, ease: 'easeInOut' }}
-    viewport={{ once: true, amount: 0.5 }}
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 2, ease: 'easeInOut' }}
+    viewport={{ once: true, amount: 0.2 }}
     id='pricing' className='md:px-15 mb-10'>
       <h2 className='text-center font-bold text-[3rem] mt-20 px-15 mb-10 leading-12'>Choose the Plan That <span className='text-blue-600'>Moves You Forward</span></h2>
       <div className='flex gap-5 justify-center mb-5 w-[300px] p-2 mx-auto'>
@@ -24,7 +24,7 @@ const Pricing = () => {
       <p className='text-center text-gray-500 mb-12'>Switch to Yearly to <span className='text-black'>Save 20%!</span></p> 
 
       {!yearly && (
-        <div className='p-5 m-5 md:flex md:gap-5 md:10 md:justify-center'>
+        <div className='p-5 m-5 md:flex md:gap-10 md:10 md:justify-center'>
             <div className='p-5 hover:border-2 rounded-2xl border-gray-400 transition-all duration-300 ease-in-out mb-10'>
                 <h5 className='font-bold text-gray-400 mb-5'>Basic</h5>
                 <h2 className='font-bold text-[4rem] text-gray-400'>$29 <span className='font-light text-[1rem] text-gray-700'>/month</span></h2>

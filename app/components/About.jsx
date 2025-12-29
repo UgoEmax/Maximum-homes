@@ -5,10 +5,10 @@ import { motion } from 'motion/react';
 const About = () => {
   return (
     <motion.div 
-        initial={{ opacity: 0, scale: 0 }}
+        initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: 'easeInOut' }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
         id='about' className='md:px-15 pt-10 mb-10'>
       <h3 className='text-center text-gray-600 font-bold m-5 p-3 text-1xl'>ABOUT US</h3>
       <div className='md:flex md:justify-center'>

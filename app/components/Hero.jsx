@@ -6,13 +6,13 @@ import { motion } from 'motion/react';
 const Hero = () => {
   return (
     <motion.div 
-    initial={{ opacity: 0, scale: 0 }}
-    whileInView={{ opacity: 1, scale: 1 }}
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 1, ease: 'easeInOut' }}
-    viewport={{ once: true, amount: 0.5 }}
-     className='relative h-[100vh] w-full bg-cover flex flex-col md:px-15 md:flex-row md:gap-20 md:justify-between mb-10' style={{ backgroundImage: "url('/images/hero.jpg')" }}>
+    viewport={{ once: true, amount: 0.2 }}
+     className='relative h-[100vh] w-full bg-cover flex flex-col md:px-15 md:flex-row md:gap-20 md:justify-between mb-10' style={{ backgroundImage: "url('/images/hero.jpg')" }}> 
 
-      <div className="absolute inset-0 bg-black/40 z-0"></div>
+      <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
       <h1 className="md:max-w-170 max-w-100 font-extrabold text-6xl md:text-[7rem] md:pt-20 pl-5 pt-10 text-white z-1 transform-[10%] mt-30 md:leading-25 md:translate-y-6">Your Home. Your Future.</h1>
 

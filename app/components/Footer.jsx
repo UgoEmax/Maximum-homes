@@ -47,10 +47,10 @@ const Footer = () => {
 
   return (
     <motion.div 
-    initial={{ opacity: 0, scale: 0 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1, ease: 'easeInOut' }}
-    viewport={{ once: true, amount: 0.5 }}
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 2, ease: 'easeInOut' }}
+    viewport={{ once: true, amount: 0.2 }}
     className='mx-5 md:px-15'>
         <div className='flex justify-center align-middle'>
         <Image src="/images/logo.png" alt="Logo" width=   {100} height={100} className='align-center     justify-center p-3 brightness-0 mb-10 mt-30' />
