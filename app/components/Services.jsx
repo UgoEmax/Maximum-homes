@@ -39,7 +39,7 @@ const Services = () => {
       <p className='text-gray-700 mb-5 flex gap-2'><IoCheckmarkCircleOutline className='text-[1.3rem] translate-y-0.5 text-blue-600'/> Photography & listing management</p>
       <p className='text-gray-700 mb-5 flex gap-2'><IoCheckmarkCircleOutline className='text-[1.3rem] translate-y-0.5 text-blue-600'/> Buyer negotiation & closing support</p>
       <div className='md:flex md:justify-center'>
-      <Image src="/images/mansion.jpg" alt="Home Selling" width={400} height={250} className='rounded-full h-75' />
+      <Image src="/images/mansion.jpg" alt="Home Selling" width={400} height={250} className='rounded-full h-75 md:h-100' />
       </div>
     </div>
  
