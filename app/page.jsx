@@ -5,6 +5,7 @@ import Services from './components/Services'
 import Pricing from './components/Pricing'
 import HowItWorks from './components/HowItWorks'
 import FaqLogic from './components/FaqLogic'
+import CallToAction from './components/CallToAction'
 
 const page = () => {
   return (
@@ -49,6 +50,7 @@ const page = () => {
       </div>
 
       <FaqLogic />
+      <CallToAction />
       
     </div>
   )

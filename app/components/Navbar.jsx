@@ -8,8 +8,8 @@ const Navbar = () => {
     const [ open, setOpen ] = useState(false);
 
   return (
-    <div className='justify-between fixed p-1.5 z-50 w-full md:py-5 md:pl-15 h-[20px]'>
-      <Image src="/images/logo.png" alt="Logo" width={50} height={50} className='align-left p-3 invert brightness-0 cursor-pointer z-10' />
+    <div className='justify-between fixed p-1.5 z-50 w-full md:py-5 md:pl-15 h-[65px] md:h-[70px] bg-black/30'>
+      <Image src="/images/logo.png" alt="Logo" width={50} height={50} className='align-left p-3 invert brightness-0 cursor-pointer z-10 md:-translate-y-2' />
 
 
       {/* MENU TOGGLE BUTTON */}
@@ -23,8 +23,8 @@ const Navbar = () => {
       <Link href="#services" className='hover:underline transition-all duration-300 ease-in-out' onClick={() => setOpen(false)}>Services</Link>
       <Link href="#pricing" className='hover:underline transition-all duration-300 ease-in-out' onClick={() => setOpen(false)}>Packages</Link>
       <Link href="#how-it-works" className='hover:underline transition-all duration-300 ease-in-out' onClick={() => setOpen(false)}>How it Works</Link>
-      <Link href="#faqs" className='hover:underline transition-all duration-300 ease-in-out' onClick={() => setOpen(false)}>FAQs</Link>
-      <Link href="/" className='mt-5 bg-gray-50 text-gray-950 p-1 rounded-2xl hover:underline transition-all duration-300 ease-in-out' onClick={() => setOpen(false)}>Contact Us</Link>
+      <Link href="#faqs" className='hover:underline transition-all duration-300 ease-in-out' onClick={() => setOpen(false)}>FAQs</Link> 
+      <Link href="#contact-us" className='mt-5 bg-gray-50 text-gray-950 p-1 rounded-2xl hover:underline transition-all duration-300 ease-in-out' onClick={() => setOpen(false)}>Contact Us</Link>
       </div>
 
 
